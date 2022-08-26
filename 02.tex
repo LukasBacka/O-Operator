@@ -1,0 +1,120 @@
+\section{Aplication}
+
+\subsection{First aplication}
+
+\begin{definition}
+      \(\mathcal{T}\) function is recursive \(\mathcal{T}(n_1, n_2,
+      ..., n_k | x) = n_1^{\mathcal{T}(n_2, ..., n_k | x)}\) with
+      endpoints \(\mathcal{T}(n_k | x ) = n_k^x\) , 
+      where the coefficients  \((n_1, n_2, ..., n_k)\) make up the 
+      \(\xi\) vector,
+      when it applies \(n_1, n_2, ..., n_k \in  \mathbb{C}\). 
+      \(\mathcal{T}(n_1, n_2, ..., n_k | x) \) is the \(\mathcal{T}\)
+      k-th order function with base \(x\).
+\end{definition}
+
+Then it is necessary to define its inverse function, because 
+the equation \(\mathcal{T}(2, 3 | x) = x\) we can reformulate
+into an equivalent form\(log_3(log_2(x)) = x\).
+
+\begin{definition}[\(\mathcal{D}\)-function]
+      The \(\mathcal{T}^{-1}\) function is a recursive function
+      
+      \begin{equation}
+            \mathcal{T}^{-1}(n_1, n_2, ..., n_k | x) = 
+            log_{n_1}({\mathcal{T}^{-1}(n_2, ..., n_k | x)})
+      \label{3}
+      \end{equation}
+      
+      with endpoints \(\mathcal{T}^{-1}(n_k | x ) = log_{n_k}(x)\), 
+      where \(n_1, n_2, ..., n_k \in  \mathbb{C}\). We choose notation
+      \(\mathcal{T}^{-1}(\xi_k | x) := \mathcal{D}(\xi_k | x)\). 
+      \(\mathcal{D}(n_1, n_2, ..., n_k | x) \) is \(\mathcal{D}\)
+      k-th order function with base \(x\).
+\end{definition}
+
+
+\begin{definition}
+      Let us have function
+      
+      \begin{align}
+            \mathcal{T}(\xi_k |x) + \frac{(x-t_1)(x-t_2)...
+            (x-t_n)}{(x-s_1)(x-s_2)...(x-s_m)} \equiv 
+            \mathbb{D}\left( \xi_k \begin{matrix} \iota_n
+            \\ \zeta_m \end{matrix} \bigg| x \right)=w
+      \end{align}
+      
+      where \(\bigotimes_{u=1}^n t_u = \iota_n; 
+      \bigotimes_{r=1}^m s_r = \zeta_m\)
+      then its inversion can be written in the form
+      
+      \begin{align}
+            x = \mathbb{T}\left( \xi_k \begin{matrix} 
+            \iota_n \\ \zeta_m \end{matrix} \bigg| w \right)
+      \end{align}
+\end{definition}
+
+
+
+\subsubsection{nth derivation of the \(\hat{\mathbb{D}}\)-function}
+
+\begin{align}
+      \left[\hat{\mathbb{D}}\left( \xi_k \begin{matrix} P_m \\ 
+      \Omega_m \end{matrix} \bigg| x  \right)\right]^{(\xi)} &= 
+      \frac{d^\xi}{dx^\xi}(\mathcal{T}(\bigotimes_{m \geq t \geq
+      n}x_t | x) ) + \frac{d^\xi}{dx^\xi}\left(\prod_{i=1}^m(x -
+      \omega_i)^{p_i}^{v}  \right)\\
+      & = \mathcal{T}(\bigotimes_{m \geq t \geq n}x_t| x) \ln^\xi
+      (x_m) \biigO_{\lambda = 1}^{m-1} \left[\sum_{u_{\lambda
+      }=1}^{u_{\lambda-1}}\ln^{u_{\lambda}}(x_{m-\lambda}) 
+      \mathcal{T}(\bigotimes_{q = \lambda-1}^\lambda x_{m-q} 
+      |x)^{u_{\lambda}} \right] + \\
+      & + \xi! \sum_{\sum_{j=1}^m k_j = \xi}\prod_{1 \leq t
+      \leq m} \frac{(x - \omega_t)^{p_k v}\Gamma(1+p_t v)}{k_t\Gamma(1+p_t v - k_t)}
+\end{align}
+
+then 
+
+\begin{align}
+      \hat{\mathbb{T}}^{(\xi)}\left( \xi_k \begin{matrix} 
+      P_m \\ \Omega_m \end{matrix} \bigg| x  \right) = \sum
+      \frac{(-1)^{\beta_1 + \xi}(\beta_1 -1)!}{\prod_{i=2}^\xi 
+      (\beta_i)!i!^{\beta_i}} \hat{\mathbb{D}}^{(1)}\left( \xi_k 
+      \begin{matrix} P_m \\ \Omega_m \end{matrix} \bigg| x  \right)
+      \prod_{j=2}^\xi \left(\hat{\mathbb{D}}^{(i)}\left( \xi_k 
+      \begin{matrix} P_m \\ \Omega_m \end{matrix} \bigg| x  
+      \right)^{\beta_i}\right)
+\end{align}
+
+where
+
+\begin{align}
+      \beta_1 \leq 2n-1,  \beta_i \geq 0,  \sum_{i=2}^n 
+      \beta_i = \beta_1 - n,   \sum_{i=2}^n i \beta_i = \beta_1 - 1
+\end{align}
+
+Hence
+
+\begin{align}
+      \hat{\mathbb{T}}^{(\xi)}\left( \xi_k \begin{matrix} P_m \\ 
+      \Omega_m \end{matrix} \bigg| x  \right) &= \sum \frac{(-1)^{
+      \beta_1 + \xi}(\beta_1 -1)!}{\prod_{i=2}^\xi (\beta_i)!i!^{
+      \beta_i}} (\prod_{\lambda = 1}^k (\ln(n_\lambda) \mathcal{T}(
+      \bigotimes_{j=1}^\lambda n_j |x) + \\
+      &+\sum_{i=1}^m p_i \prod_{j=1}^m (x-\omega_j)^{p_i-\delta_{i,
+      j}(1)} )\prod_{j=2}^\xi \left(\hat{\mathbb{D}}^{(i)}\left(
+      \xi_k \begin{matrix} P_m \\ \Omega_m \end{matrix} \bigg| x 
+      \right)^{\beta_i}\right)\\
+      &= \sum \frac{(-1)^{\beta_1 + \xi}(\beta_1 -1)!}{\prod_{i=2}^\xi 
+      (\beta_i)!i!^{\beta_i}} (\prod_{\lambda = 1}^k (\ln(n_\lambda)
+      \mathcal{T}(\bigotimes_{j=1}^\lambda n_j |x) + \\
+      &+\sum_{i=1}^m p_i \prod_{j=1}^m (x-\omega_j)^{p_i-\delta_{i, 
+      j}(1)} )\prod_{j=2}^\xi \left(\mathcal{T}(\bigotimes_{m \geq 
+      t \geq n}x_t| x) \ln^i (x_m) \right.\\
+      &\left. \biigO_{\lambda = 1}^{m-1} \left[\sum_{u_{\lambda}=1}^{u_{
+      \lambda-1}}\ln^{u_{\lambda}}(x_{m-\lambda}) \mathcal{T}(\bigotimes_{q
+      = \lambda-1}^\lambda x_{m-q} |x)^{u_{\lambda}} \right] + \right.\\
+      &\left.+ i! \sum_{\sum_{j=1}^m k_j = i}\prod_{1 \leq t \leq m} 
+      \frac{(x - \omega_t)^{p_k v}\Gamma(1+p_t v)}{k_t\Gamma(1+p_t v
+      - k_t)}\right)^{\beta_i}
+\end{align}
