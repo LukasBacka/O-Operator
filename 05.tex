@@ -1,0 +1,29 @@
+\subsection{Fourth application}
+
+We can create formula for Tower function
+
+\begin{definition}
+        \(\mathcal{T}\) function is recursive \(\mathcal{T}(n_1,
+        n_2, ..., n_k | x) = n_1^{\mathcal{T}(n_2, ..., n_k | x)
+        }\) with endpoints \(\mathcal{T}(n_k | x ) = n_k^x\) , 
+        where the coefficients  \((n_1, n_2, ..., n_k)\) make 
+        up the \(\xi\) vector,
+        when it applies \(n_1, n_2, ..., n_k \in  \mathbb{C}\). 
+        \(\mathcal{T}(n_1, n_2, ..., n_k | x) \) is the 
+        \(\mathcal{T}\) k-th order function with base \(x\).
+\end{definition}
+
+then we use identity $a^x = \sum_{n\geq0}\frac{x^n
+\ln^n(a)}{n!}$, where $x \in (0, 1\rangle$.
+
+\begin{align}
+        \mathcal{T}(a_1, ..., a_m |x)= \sum_{l=0}^\infty
+        \frac{\ln(a_1)}{l!}, \biigO_{\mu=1}^{m}\sum_{
+        \substack{\sum_{i=1}^\infty = n_\mu \\ \mathcal{K}
+        \geq 0}}\binom{n_{\mu}}{\mathcal{K}}\prod_{t=1}^\infty
+        \left(\frac{\ln(a_{\mu+1})}{(n_{\mu+1})!}(\lambda_{
+        \mu+1})^{n_{\mu+1}}\right)^{k_t}
+\end{align}
+
+where $k_1, ..., \lim_{n\to \infty}k_n \equiv \mathcal{K} 
+$ and $\lambda_{m+1}=x$.
