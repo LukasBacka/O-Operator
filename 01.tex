@@ -1,0 +1,25 @@
+\section{Introduction}
+
+\begin{definition}
+      Let us have an O  operator
+      
+      \begin{align}
+            \biigO_{t = 1}^m g(f(t) \ o \  
+            \lambda) := g(f(1) \ o \  g(f(2)
+            \ o \   g(... g(f(m) )...)))
+      \end{align}
+      
+      where o is some binary arithmetic operation. 
+      We will \(f(t)\) call as nucleus, \(\lambda\)
+      as the tail, and g(.) as surface. The tail is
+      where the operator will iterate.
+\end{definition}
+
+through this definition we are able
+to define a summation operator and
+a product operator as
+
+\begin{align}
+      \sum_{i=1}^m f(i) &= \biigO_{i=1}^m f(i) + \lambda \\
+      \prod_{i=1}^m f(i) &= \biigO_{i=1}^m f(i)\times \lambda
+\end{align}
